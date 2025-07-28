@@ -1,53 +1,62 @@
-* {
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  height: 100vh;
   margin: 0;
-  padding: 0;
+}
+
+.left-panel, .right-panel {
+  flex: 1;
+  padding: 20px;
   box-sizing: border-box;
 }
 
-body {
-  height: 100vh;
-  display: flex;
-  background-color: #111;
-}
-
 .left-panel {
-  width: 75vw; /* 3/4 of the screen */
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 columns */
-  grid-template-rows: repeat(2, 1fr);    /* 2 rows */
-  gap: 10px;
-  padding: 20px;
-}
-
-.column {
-  background-color: rgb(63, 68, 73);
-  border-radius: 8px;
+  background-color: #f0f0f0;
+  border-right: 2px solid #ccc;
 }
 
 .right-panel {
-  width: 25vw; /* 1/4 of the screen */
-  background-color: #222; /* optional: visual separation */
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  background-color: #ffffff;
   position: relative;
-  flex: 1;
- }
+  overflow: hidden;
+}
+
 .box {
   width: 100px;
   height: 100px;
-  border: 2px solid black;
-  position: absolute;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: grab;
-    }
-.red {
-  background-color: red;
+  position: absolute;
+  user-select: none;
+  border-radius: 8px;
 }
 
-.blue {
-  background-color: blue;
+.red {
+  background-color: red;
+  top: 20px;
+  left: 20px;
 }
 
 .green {
   background-color: green;
+  top: 140px;
+  left: 20px;
+}
+
+.blue {
+  background-color: blue;
+  top: 260px;
+  left: 20px;
+}
+
+#timer {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 24px;
+  font-weight: bold;
 }
